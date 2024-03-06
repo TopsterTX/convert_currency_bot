@@ -1,9 +1,10 @@
-# create the Telegram bot
+# create Telegram bot
 import os
 import telebot
 from dotenv import load_dotenv
 from parser import get_currency
 
+# load .env file
 load_dotenv()
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')

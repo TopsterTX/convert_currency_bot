@@ -4,10 +4,9 @@ from bs4 import BeautifulSoup
 
 def get_currency(code):
 
-    # parsing google.com
+    # parsing www.banki.ru
     url = "https://www.banki.ru/products/currency/cb"
     soup = BeautifulSoup(requests.get(url).text, "html.parser")
-    # continue
 
     # find <tr> element with data-currency-code attribute
     currency = soup.find("tr", attrs={"data-currency-code": code}).find_all("td")[-2].string.strip()
